@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <title>Registeration</title>
+</head>
+<body>
+    <script>
+         
+        function submi(){
+              var name=document.getElementById("name").value.trim();
+              var conpassword=document.getElementById("conpassword").value.trim();
+              var Email=document.getElementById("Email").value.trim();     
+       }
+       function check(){
+        var pass=document.getElementById("password").value.trim();
+        console.log(pass+"  "+pass.length);
+        if(pass.length>=5){
+              document.getElementById("error").innerHTML="good";
+        }
+        else{
+            document.getElementById("error").innerHTML="poor";
+            
+        }
+       }
+
+   </script>
+    <div class="container">
+        <form id="form">
+            <h1>Register</h1>
+            <div class="input-group">
+            <label for="name">UserName</label>
+            <input type="text" name="name" id="name" required placeholder="Username"> 
+        </div>
+        <div class="input-group">
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password" required placeholder="Password" onkeyup="check()"> 
+            <span id="error">hida</span>
+        </div>
+        <div class="input-group">
+            <label for="conpassword">Confirm Password</label>
+            <input type="password" name="conpassword" id="conpassword" required placeholder="Password">  
+        </div>
+        <div class="input-group">
+            <label for="Email">Email</label>
+            <input type="email" name="Email" id="Email" required placeholder="Email">  
+        </div>
+        <div>
+            <button onclick="submi()">Register</button>
+        </div>
+        </form>
+    </div> 
+    
+</body>
+</html>
